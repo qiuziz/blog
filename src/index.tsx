@@ -15,6 +15,10 @@ setGlobalData('PREFIX', '');
  */
 if (window.__POWERED_BY_QIANKUN__) {
   setGlobalData('PREFIX', '/q');
+  setTimeout(() => {
+    const bg = document.querySelector('#bg') as HTMLElement;
+    bg && bg.style && (bg.style.top = '64px');
+  }, 0);
   // eslint-disable-next-line no-unused-vars
   __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
 }
@@ -24,31 +28,13 @@ function render(props: any) {
   ReactDOM.render(<Router />, (container || document).querySelector('#root'));
 }
 
-function storeTest(props: any) {
-  props.onGlobalStateChange(
-    (value: any, prev: any) => console.log(`[onGlobalStateChange - ${props.name}]:`, value, prev),
-    true
-  );
-  props.setGlobalState({
-    ignore: props.name,
-    user: {
-      name: props.name
-    }
-  });
-}
-
-// @ts-ignore
 if (!window.__POWERED_BY_QIANKUN__) {
   render({});
 }
 
-export async function bootstrap() {
-  console.log('[subapp] react app bootstraped');
-}
+export async function bootstrap() {}
 
 export async function mount(props: any) {
-  console.log('[subapp] props from main framework', props);
-  storeTest(props);
   render(props);
 }
 
