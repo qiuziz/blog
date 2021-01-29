@@ -3,7 +3,7 @@
  * @Github: <https://github.com/qiuziz>
  * @Date: 2019-11-07 16:03:31
  * @Last Modified by: qiuz
- * @Last Modified time: 2021-01-29 10:52:32
+ * @Last Modified time: 2021-01-29 12:02:49
  */
 
 import React from 'react';
@@ -15,14 +15,14 @@ const prefix = (window as any).__POWERED_BY_QIANKUN__ ? '/widget' : '';
 
 export const routes = [
   {
-    path: '/',
+    path: '/blog/',
     Component: Home,
     exact: true,
     title: '首页',
     noNav: true
   },
   {
-    path: '/article',
+    path: '/blog/article/',
     Component: Article,
     exact: true,
     title: '',
