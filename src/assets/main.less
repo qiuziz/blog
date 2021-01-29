@@ -234,11 +234,11 @@ textarea {
 }
 
 a {
-  -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
-  -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
-  -ms-transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
-  border-bottom: dotted 1px;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border-bottom: none;
   text-decoration: none
 }
 
@@ -390,8 +390,7 @@ a {
 }
 
 a:hover {
-  border-bottom-color: transparent;
-  color: #18bfef !important
+  border-bottom: dotted 1px;
 }
 
 strong,
@@ -4620,7 +4619,7 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
   right: 0;
   text-align: right;
   top: 0;
-  vertical-align: middle;
+  // vertical-align: middle;
   width: 7rem
 }
 
