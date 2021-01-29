@@ -28,9 +28,9 @@ export const Post = (props: PropsType) => {
 				data.map((post: any) => {
 					return (
 						<div key={post.id} className="post__content" onClick={onPostClick(post)}>
-							<h2 className="title"><a href={`/article?number=${post.number}`}>{post.title}</a></h2>
+							<h2 className="title"><a href={`/q/blog/article?number=${post.number}`}>{post.title}</a></h2>
 							<p className="publish-time">{dateFormat(new Date(post.updated_at))} by <a href="https://github.com/qiuziz">qiuz</a></p>
-							<p className="intro"><a href={`/article?number=${post.number}`}>{post.body.slice(0, 200)}...</a></p>
+							<p className="intro"><a href={`/q/blog/article?number=${post.number}`}>{post.body.slice(0, 200)}...</a></p>
 						</div>
 					)
 				})
