@@ -51,7 +51,7 @@ export const Article = (props: PropsType) => {
           </p>
         </React.Fragment>
       ) : (
-        <Loading className="fixed" />
+        <Loading />
       )}
     </div>
   );
