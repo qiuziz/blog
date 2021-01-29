@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/blog/list/static/css/main.20a15d1f.chunk.css",
-    "main.js": "/blog/list/static/js/main.382f1be3.chunk.js",
-    "main.js.map": "/blog/list/static/js/main.382f1be3.chunk.js.map",
-    "runtime-main.js": "/blog/list/static/js/runtime-main.8bde3148.js",
-    "runtime-main.js.map": "/blog/list/static/js/runtime-main.8bde3148.js.map",
-    "static/js/2.ea108e7a.chunk.js": "/blog/list/static/js/2.ea108e7a.chunk.js",
-    "static/js/2.ea108e7a.chunk.js.map": "/blog/list/static/js/2.ea108e7a.chunk.js.map",
-    "static/js/3.3123e90c.chunk.js": "/blog/list/static/js/3.3123e90c.chunk.js",
-    "static/js/3.3123e90c.chunk.js.map": "/blog/list/static/js/3.3123e90c.chunk.js.map",
-    "index.html": "/blog/list/index.html",
-    "static/css/main.20a15d1f.chunk.css.map": "/blog/list/static/css/main.20a15d1f.chunk.css.map",
-    "static/js/2.ea108e7a.chunk.js.LICENSE.txt": "/blog/list/static/js/2.ea108e7a.chunk.js.LICENSE.txt",
-    "static/media/index.5bfdd7b8.scss": "/blog/list/static/media/index.5bfdd7b8.scss",
-    "static/media/index.7d4ed274.scss": "/blog/list/static/media/index.7d4ed274.scss"
+    "main.css": "/blog/static/css/main.20a15d1f.chunk.css",
+    "main.js": "/blog/static/js/main.382f1be3.chunk.js",
+    "main.js.map": "/blog/static/js/main.382f1be3.chunk.js.map",
+    "runtime-main.js": "/blog/static/js/runtime-main.fbc3976d.js",
+    "runtime-main.js.map": "/blog/static/js/runtime-main.fbc3976d.js.map",
+    "static/js/2.ea108e7a.chunk.js": "/blog/static/js/2.ea108e7a.chunk.js",
+    "static/js/2.ea108e7a.chunk.js.map": "/blog/static/js/2.ea108e7a.chunk.js.map",
+    "static/js/3.3123e90c.chunk.js": "/blog/static/js/3.3123e90c.chunk.js",
+    "static/js/3.3123e90c.chunk.js.map": "/blog/static/js/3.3123e90c.chunk.js.map",
+    "index.html": "/blog/index.html",
+    "static/css/main.20a15d1f.chunk.css.map": "/blog/static/css/main.20a15d1f.chunk.css.map",
+    "static/js/2.ea108e7a.chunk.js.LICENSE.txt": "/blog/static/js/2.ea108e7a.chunk.js.LICENSE.txt",
+    "static/media/index.5bfdd7b8.scss": "/blog/static/media/index.5bfdd7b8.scss",
+    "static/media/index.7d4ed274.scss": "/blog/static/media/index.7d4ed274.scss"
   },
   "entrypoints": [
-    "static/js/runtime-main.8bde3148.js",
+    "static/js/runtime-main.fbc3976d.js",
     "static/js/2.ea108e7a.chunk.js",
     "static/css/main.20a15d1f.chunk.css",
     "static/js/main.382f1be3.chunk.js"
