@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://blog.qiuz.site/blog/list/",
+  "homepage": "http://blog.qiuz.site/blog/",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
