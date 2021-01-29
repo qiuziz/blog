@@ -3,11 +3,11 @@
  * @Github: <https://github.com/qiuziz>
  * @Date: 2019-10-31 20:39:25
  * @Last Modified by: qiuz
- * @Last Modified time: 2021-01-29 10:48:08
+ * @Last Modified time: 2021-01-29 12:08:30
  */
 
 import React from 'react';
-import './index.scss';
+import './index.less';
 import { dateFormat } from 'utils';
 
 interface PropsType {

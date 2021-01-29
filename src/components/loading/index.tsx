@@ -3,11 +3,11 @@
  * @Github: <https://github.com/qiuziz>
  * @Date: 2019-11-07 15:36:30
  * @Last Modified by: qiuz
- * @Last Modified time: 2019-12-31 17:57:10
+ * @Last Modified time: 2021-01-29 12:08:40
  */
 
 import React from 'react';
-import './index.scss';
+import './index.less';
 
 interface Props {
 	className?: string;
