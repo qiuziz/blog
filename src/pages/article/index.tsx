@@ -11,7 +11,6 @@ import './index.less';
 import { Resource } from 'service';
 import { getUrlParams, dateFormat } from 'utils';
 import Markdown from 'react-markdown';
-import { Loading } from 'components';
 
 interface PropsType {
   History: any;
@@ -24,7 +23,6 @@ export const Article = (props: PropsType) => {
   const [data, setData] = useState({} as any);
   const getArticle = useCallback(() => {
     Resource.issues.get({ number }).then((res: any) => {
-      console.log(res);
       document.title = res.title;
       setData(res);
     });
@@ -37,7 +35,7 @@ export const Article = (props: PropsType) => {
   return (
     <div className="article content">
       {data.title ? (
-        <React.Fragment>
+        <>
           <h2>{data.title}</h2>
           <p className="publish-time">
             {data.updated_at && dateFormat(new Date(data.updated_at))} by{' '}
@@ -49,9 +47,9 @@ export const Article = (props: PropsType) => {
               <a href={`https://github.com/qiuziz/qiuziz.github.io/issues/${number}`}>去评论</a>
             </label>
           </p>
-        </React.Fragment>
+        </>
       ) : (
-        <Loading />
+        <div>loading...</div>
       )}
     </div>
   );

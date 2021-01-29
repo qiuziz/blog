@@ -8,10 +8,8 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-
 import { Home, Article } from 'pages';
-
-const prefix = (window as any).__POWERED_BY_QIANKUN__ ? '/q' : '';
+import { getGlobalData } from 'utils';
 
 export const routes = [
   {
@@ -31,6 +29,7 @@ export const routes = [
 ];
 
 const App = () => {
+  const prefix = getGlobalData('PREFIX');
   return (
     <Switch>
       {routes.map(({ path, Component, exact }: any, index) => {
@@ -43,7 +42,7 @@ const App = () => {
           />
         );
       })}
-       <Redirect to={`${prefix}/blog`} />
+      <Redirect to={`${prefix}/blog`} />
     </Switch>
   );
 };

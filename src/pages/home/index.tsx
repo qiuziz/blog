@@ -36,7 +36,7 @@ export const Home = () => {
         pageStart={0}
         loadMore={getPosts}
         hasMore={hasMore}
-        loader={<div>loading...</div>}
+        loader={<div key={0}>loading...</div>}
       >
         <Post data={postList} />
       </InfiniteScroll>

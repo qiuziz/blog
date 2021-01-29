@@ -7,3 +7,4 @@
 
 
 export * from './helper';
+export * from './global-data';
