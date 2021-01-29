@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 
 import { Home, Article } from 'pages';
 
+const prefix = (window as any).__POWERED_BY_QIANKUN__ ? '/widget' : '';
+
 export const routes = [
   {
     path: '/',
@@ -35,18 +37,18 @@ const App = () => {
         return (
           <Route
             key={index}
-            path={path}
+            path={`${prefix}${path}`}
             exact={exact}
             render={(props) => <Component {...props} History={History} />}
           />
         );
       })}
-      <Redirect to={''} />
+       <Redirect to={`${prefix}/blog`} />
     </Switch>
   );
 };
 
-export default class RouteConfig extends React.Component {
+export default class RouteConfig extends React.Component<any, any> {
   render() {
     return (
       <Router>
