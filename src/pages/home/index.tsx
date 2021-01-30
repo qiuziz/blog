@@ -9,8 +9,9 @@
 import React, { useState } from 'react';
 import './index.less';
 import { Resource } from 'service';
-import { Post, Loading } from 'components';
+import { Post } from 'components';
 import InfiniteScroll from 'react-infinite-scroller';
+import { useViewport } from 'hooks';
 
 export const Home = () => {
   const [postList, setPostList] = useState<any[]>([]);
@@ -22,8 +23,19 @@ export const Home = () => {
       setHasMore(res.length >= 5);
     });
   };
+
+  const { width } = useViewport();
+
+  const maxWidth600 =
+    width <= 600
+      ? {
+          margin: 0,
+          width: '100%'
+        }
+      : {};
+
   return (
-    <div className="home">
+    <div className="home" style={maxWidth600}>
       <InfiniteScroll
         pageStart={0}
         loadMore={getPosts}
