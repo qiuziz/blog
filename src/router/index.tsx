@@ -10,6 +10,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { Home, Article } from 'pages';
 import { getGlobalData } from 'utils';
+import { ViewportProvider } from 'hooks';
 
 export const routes = [
   {
@@ -50,9 +51,11 @@ const App = () => {
 export default class RouteConfig extends React.Component<any, any> {
   render() {
     return (
-      <Router>
-        <App />
-      </Router>
+      <ViewportProvider>
+        <Router>
+          <App />
+        </Router>
+      </ViewportProvider>
     );
   }
 }
