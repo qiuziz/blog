@@ -15,12 +15,13 @@ setGlobalData('PREFIX', '');
  */
 if (window.__POWERED_BY_QIANKUN__) {
   setGlobalData('PREFIX', '/q');
-  setTimeout(() => {
-    const bg = document.querySelector('#bg') as HTMLElement;
-    bg && bg.style && (bg.style.top = '64px');
-  }, 0);
   // eslint-disable-next-line no-unused-vars
   __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+} else {
+  setTimeout(() => {
+    const bg = document.querySelector('#bg') as HTMLElement;
+    bg && bg.style && (bg.style.top = '0');
+  }, 0);
 }
 
 function render(props: any) {
