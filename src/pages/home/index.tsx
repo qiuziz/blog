@@ -25,7 +25,7 @@ export const Home = () => {
   };
 
   const { width } = useViewport();
-
+  console.log(width);
   const maxWidth600 =
     width <= 600
       ? {
