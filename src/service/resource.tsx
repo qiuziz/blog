@@ -5,7 +5,7 @@
 
 import { fetchResource } from './fetchapi';
 const API_HOST = 'https://api.github.com';
-const SERVICE_NAME = '/repos/qiuziz/qiuziz.github.io';
+const SERVICE_NAME = '/repos/qiuziz/blog';
 
 export const Resource = {
 	/**

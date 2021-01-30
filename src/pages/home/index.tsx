@@ -22,14 +22,6 @@ export const Home = () => {
       setHasMore(res.length >= 5);
     });
   };
-  const style =
-    postList.length <= 0
-      ? {
-          className: 'fixed'
-        }
-      : {
-          zoom: 0.2
-        };
   return (
     <div className="home">
       <InfiniteScroll
