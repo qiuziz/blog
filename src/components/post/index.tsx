@@ -9,6 +9,7 @@
 import React from 'react';
 import './index.less';
 import { dateFormat, getGlobalData } from 'utils';
+import { useViewport } from 'hooks';
 
 interface PropsType {
   data: any[];
@@ -24,12 +25,14 @@ export const Post = (props: PropsType) => {
     onClick(data);
   };
 
+  const { width } = useViewport();
+
   return (
     <div className="post-container">
       {data.map((post: any) => {
         return (
           <div key={post.id} className="post__content" onClick={onPostClick(post)}>
-            <h2 className="title">
+            <h2 className={`title ${width <= 600 ? 'h2-max-width-600' : ''}`}>
               <a href={`${prefix}/blog/article?number=${post.number}`}>{post.title}</a>
             </h2>
             <p className="publish-time">
@@ -37,7 +40,7 @@ export const Post = (props: PropsType) => {
               <a href="https://github.com/qiuziz">qiuz</a>
             </p>
             <p className="intro">
-              <a href={`${prefix}/blog/article?number=${post.number}`}>
+              <a className={`${width <= 600 ? 'a-max-width-600' : ''}`} href={`${prefix}/blog/article?number=${post.number}`}>
                 {post.body.slice(0, 200)}...
               </a>
             </p>

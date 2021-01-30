@@ -11,6 +11,7 @@ import './index.less';
 import { Resource } from 'service';
 import { getUrlParams, dateFormat } from 'utils';
 import Markdown from 'react-markdown';
+import { useViewport } from 'hooks';
 
 interface PropsType {
   History: any;
@@ -32,8 +33,19 @@ export const Article = (props: PropsType) => {
     getArticle();
   }, [getArticle]);
 
+  const { width } = useViewport();
+
+
+  const maxWidth600 =
+    width <= 600
+      ? {
+          margin: 0,
+          width: '100%'
+        }
+      : {};
+
   return (
-    <div className="article content">
+    <div className="article content" style={maxWidth600}>
       {data.title ? (
         <>
           <h2>{data.title}</h2>
