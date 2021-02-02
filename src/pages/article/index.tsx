@@ -56,7 +56,7 @@ export const Article = (props: PropsType) => {
           <Markdown source={data.body} />
           <p className="commit">
             <label>
-              <a href={`https://github.com/qiuziz/qiuziz.github.io/issues/${number}`}>去评论</a>
+              <a href={`https://github.com/qiuziz/blog/issues/${number}`}>去评论</a>
             </label>
           </p>
         </>
